@@ -35,7 +35,7 @@ typedef enum {
  *
  * @param nativeAds The Array of GNNativeAd received from Ad server.
  */
-- (void)nativeAdRequestDidReceiveAds:(NSArray*)nativeAds;
+- (void)nativeAdRequestDidReceiveAds:(nonnull NSArray<GNNativeAd *>*)nativeAds;
 
 /**
  * Called when GNNativeAdRequest native ads request failed.
@@ -71,7 +71,7 @@ typedef enum {
  * Delegate object that receives state change notifications from this
  * GNNativeAdRequest.  Remember to nil the delegate before deallocating this object.
  */
-@property(nonatomic, weak) id<GNNativeAdRequestDelegate> delegate;
+@property(nonatomic, weak, nullable) id<GNNativeAdRequestDelegate> delegate;
 
 /**
  * Optional
